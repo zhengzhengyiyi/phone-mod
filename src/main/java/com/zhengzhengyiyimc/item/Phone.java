@@ -1,7 +1,9 @@
-package com.zhengzhengyiyimc;
+package com.zhengzhengyiyimc.item;
 
-import net.mineraft.item.Item;
+import net.minecraft.item.Item;
 
 public class Phone extends Item {
-    
+    public Phone(Item.Settings settings) {
+        super(settings);
+    }
 }
