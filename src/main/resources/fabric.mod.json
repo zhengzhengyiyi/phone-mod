@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "phone_mod",
+	"version": "${version}",
+	"name": "phone_mod",
+	"description": "add phone to Minecraft",
+	"authors": [
+		"zhengzhengyiyi"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/phone_mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.zhengzhengyiyimc.Phone_mod"
+		],
+		"client": [
+			"com.zhengzhengyiyimc.Phone_modClient"
+		],
+		"fabric-datagen": [
+			"com.zhengzhengyiyimc.Phone_modDataGenerator"
+		]
+	},
+	"mixins": [
+		"phone_mod.mixins.json",
+		{
+			"config": "phone_mod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.20.6",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
